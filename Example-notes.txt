@@ -1,0 +1,24 @@
+##  Library and purpose 
+
+@testing-library/react      -> Uses reactDom to render a component for testing
+@testing-library/user-event -> Helps simulate user even like typing and clicking
+@testing-library/dom        -> Helps find elements that are rendered by our component
+jest                        -> Runs our tests and report results 
+jsdom                       -> simulates a browser when running in a Node environment 
+
+
+## Behind the scenes : How were are tests found ?
+
+Jest finds all the files in the src folder that 
+    - End with .spec.js
+    - End with .test.js 
+    - Are placed in a folder called __test__ (two underscored each side)
+
+
+## What did all the testing code do (example.test.js)?
+
+In our example.test.js file we have defined two tests 
+- we define a test calling a built in 'test' function, followed by a function that contains our actual testing code.
+- render our component
+- use screen to find our element by heading 
+- receive array of elements and make sure we have 6 of then by default
