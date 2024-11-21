@@ -1,0 +1,48 @@
+## Whenever we run our tests it runs in Node.js Environment
+-Whenever we call our render function, a fake browser environment is being created by library called JS Dom. 
+    --Our HTML is taken from it and is placed into fake browser environment
+
+-After it is redered into our fake browser environment, it is being accessed by "screen" object. imported from "@testing-library/react"
+    -we use functions to find our elements redered by component.
+    -These functions are called "Query functions" 
+
+-ARIA Roles
+    -ARIA roles clarify the purpose of the HTML element
+    -Traditionally used by screen readers - softwares to help people understand the content on the screen.
+    -Many HTML elements have an "implicit"(Some elements gets automatically assigned a role), or automatically assigned role 
+    -Elements can be manually assigned a role. Even Trained engineers do it incorrectly.
+
+    https://www.w3.org/TR/html-aria/#docconformance
+
+-Matcher 
+    - Matcher is a function that we chain our tests to check if it is equal or to make sure the value provided is correct or verity of different checks.
+    -expect(input).toHaveLength(2);  - Here  ".toHaveLength(2)" is a matcher function
+    -Matchers from Jest : https://jestjs.io/docs/expect - General purpose test anything about react-components, Node.js code (pretty much any javascript)
+    -Matchers from React Testing Library : https://github.com/testing-library/jest-dom#custom-matchers  - concerned about if dom element has
+     some particular attribute or present, has text and so on.
+
+-User event click from "@testing-library/user-event"
+    -user.click(element) : simulates clicking on the provided element
+    -user.keyboard('asdf')  : Simulates Typing 'asdf'
+    -user.keyboard({Enter})  : Simulates pressing the enter key
+
+-Mock functions
+    -'mock' mean 'not real'
+    -Fake function that doesn't do anything
+    -Records whenever it gets called, and the argument it was called with
+    -Used very often when we need to make sure a component calls a callback 
+    -jest.fn()  : creates a mock funciton
+
+
+-How to find particular elements?
+    -to get help with finding a particular element, use this helper function
+        screen.logTestingPlaygroundURL()
+    -takes the html currently rendered by your component and creates a link to view that html in the 'Testing Playground' tool
+    -Testing Playground helps you write queries (functions to find elements) 
+    -you can apply stylling to elements to select them if not able to select (example: add border or padding )
+
+-beforeEach() 
+    -beforeEach() runs before each indivisual function 
+    -great place for doing any initial setup 
+    -DO NOT RENDER your component inside beforeEach function 
+    
