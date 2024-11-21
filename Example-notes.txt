@@ -22,3 +22,4 @@ In our example.test.js file we have defined two tests
 - render our component
 - use screen to find our element by heading 
 - receive array of elements and make sure we have 6 of then by default
+
