@@ -1,0 +1,3 @@
+CLI Tool 'rtl-book' to give you interactive cheatsheets 
+    -$ npx rtl-book serve role-notes.js 
+    - This above command creates a new file and saves notes in there
