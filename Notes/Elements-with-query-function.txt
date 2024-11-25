@@ -1,0 +1,3 @@
+CLI Tool 'rtl-book' to give you interactive cheatsheets to query elements by query function
+    -$ npx rtl-book serve query-notes.js 
+    - This above command creates a new file and saves notes in there
